@@ -1,33 +1,35 @@
 ((d, w) => {
+  console.log("Coming through loud and clear!");
   let square = d.getElementById( "picker" );
 
-  let rangeRed = d.getElementById( "red" );
-  let rangeGreen = d.getElementById( "green" );
-  let rangeBlue = d.getElementById( "blue" );
+  let rangeHue = d.getElementById( "hue" );
+  let rangeSat = d.getElementById( "sat" );
+  let rangeLight = d.getElementById( "light" );
 
-  let setPicker = ( (red, green, blue) => {
-    square.style.backgroundColor = `rgb(${red},${green},${blue})`;
+  let setPicker = ( ( hue, sat, light ) => {
+    console.log(`Setting:  hsl(${hue} ${sat}% ${light}%)` );
+    square.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
   } );
 
-  let red = rangeRed.value;
-  let green = rangeGreen.value;
-  let blue = rangeBlue.value;
+  let hue = rangeHue.value;
+  let sat = rangeSat.value;
+  let light = rangeLight.value;
 
-  setPicker( red, green, blue );
+  setPicker( hue, sat, light );
 
-  rangeRed.addEventListener( "input", () => {
-    red = rangeRed.value;
-    setPicker( red, green, blue );
+  rangeHue.addEventListener( "input", () => {
+    hue = rangeHue.value;
+    setPicker( hue, sat, light );
   } )
 
-  rangeGreen.addEventListener( "input", () => {
-    green = rangeGreen.value;
-    setPicker( red, green, blue );
+  rangeSat.addEventListener( "input", () => {
+    sat = rangeSat.value;
+    setPicker( hue, sat, light );
   } )
 
-  rangeBlue.addEventListener( "input", () => {
-    blue = rangeBlue.value;
-    setPicker( red, green, blue );
+  rangeLight.addEventListener( "input", () => {
+    light = rangeLight.value;
+    setPicker( hue, sat, light );
   } )
 
 })(document, window);
