@@ -28,13 +28,13 @@ gulp.task('minify-css', () => {
 		.pipe(gulp.dest('./dist/css/'));
 })
 
-// JS functions
-
 gulp.task('styles', gulp.series('sass', 'minify-css'));
+
+// JS functions
 
 gulp.task('concatScripts', function () {
 	return gulp.src('./src/js/*.js')
-		.pipe(concat('all.js'))	
+		.pipe(concat('all.js'))
 		.pipe(gulp.dest('./dist/js/'));
 });
 
