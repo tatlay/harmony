@@ -30,11 +30,19 @@
     monoColour2.style.backgroundColor = `hsl(${+hue} ${+sat-30}% ${light}%)`;
     monoColour3.style.backgroundColor = `hsl(${+hue} ${sat-30}% ${+light-50}%)`;
     monoColour4.style.backgroundColor = `hsl(${+hue} ${sat}% ${light-20}%)`;
-  })
+  });
+
+  let calcLogous = ( ( hue, sat, light ) => {
+    logousColour1.style.backgroundColor = `hsl(${+hue+20} ${+sat-5}% ${+light}%)`;
+    logousColour2.style.backgroundColor = `hsl(${+hue+10} ${+sat-5}% ${+light-10}%)`;
+    logousColour3.style.backgroundColor = `hsl(${+hue-30} ${+sat-5}% ${+light-10}%)`;
+    logousColour4.style.backgroundColor = `hsl(${+hue-60} ${+sat-5}% ${light}%)`;
+  });
 
   let createHarmonies = ( ( hue, sat, light ) => {
     calcComps( hue, sat, light );
     calcMonos( hue, sat, light );
+    calcLogous( hue, sat, light );
   });
 
   let setPicker = ( ( hue, sat, light ) => {
@@ -43,7 +51,7 @@
     monoArea.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
     splitArea.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
     logousArea.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
-    triadArea .style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
+    triadArea.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
     createHarmonies( hue, sat, light );
   } );
 
