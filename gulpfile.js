@@ -30,6 +30,7 @@ gulp.task('minify-css', () => {
 
 gulp.task('styles', gulp.series('sass', 'minify-css'));
 
+
 // JS functions
 
 gulp.task('concatScripts', function () {
@@ -48,8 +49,8 @@ gulp.task('uglyScripts', function () {
 gulp.task('javaScript', gulp.series('concatScripts', 'uglyScripts'));
 
 
-// Watch
 
+// Watch
 
 gulp.task('watch', function () {
 	gulp.watch('./src/scss/*.scss', gulp.series('styles'));
