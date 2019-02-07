@@ -2,6 +2,9 @@
   let square = d.getElementById( "picker" );
   let compArea = d.getElementById( "compColourArea" );
   let monoArea = d.getElementById( "monoColourArea" );
+  let splitArea = d.getElementById( "splitCompColourArea" );
+  let logousArea = d.getElementById( "logousColourArea" );
+  let triadArea = d.getElementById( "triadColourArea" );
 
   let rangeHue = d.getElementById( "hue" );
   let rangeSat = d.getElementById( "sat" );
@@ -38,6 +41,9 @@
     square.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
     compArea.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
     monoArea.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
+    splitArea.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
+    logousArea.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
+    triadArea .style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
     createHarmonies( hue, sat, light );
   } );
 
