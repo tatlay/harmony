@@ -12,19 +12,37 @@
 
     <!-- <main class="col-sm-offset-3 col-sm-6"> Let's not use the BootStrap classes just yet! -->
 		<main>
-      <div id="picker" class="picker"></div>
-      <div class="form-group">
-        <label for="hue">Hue</label>
-        <input id="hue" type="range" value="0" min="0" max="360" />
-      </div>
-      <div class="form-group">
-        <label for="sat">Saturation</label>
-        <input id="sat" type="range" value="50" min="0" max="100" />
-      </div>
-      <div class="form-group">
-        <label for="light">Lightness</label>
-        <input id="light" type="range" value="50" min="0" max="100" />
-      </div>
+			<div id="picker" class="picker"></div>
+			<section class="selectors">
+				<div class="form-group">
+					<label for="hue">Hue</label>
+					<input id="hue" type="range" value="0" min="0" max="360" />
+				</div>
+				<div class="form-group">
+					<label for="sat">Saturation</label>
+					<input id="sat" type="range" value="50" min="0" max="100" />
+				</div>
+				<div class="form-group">
+					<label for="light">Lightness</label>
+					<input id="light" type="range" value="50" min="0" max="100" />
+				</div>
+			</section>
+			<section class="outputs">
+				<!-- Need to work out how many divs needed in each category -->
+				<!-- Use their category and sequential number to identify with IDs eg
+					mono-1,
+					mono-2,
+					analog-1,
+					analog-2,
+					comp-1,
+					comp-2
+				-->
+				<h2>Monochromatic</h2>
+				<h2>Complementary</h2>
+				<h2>Split Complementary</h2>
+				<h2>Analogous</h2>
+				<h2>Triadic</h2>
+			</section>
 		</main>
 		<!-- For now we'll use the /src version of the JavaScript until such time
 		as the Gulp stuff is working. -->

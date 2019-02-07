@@ -7,7 +7,7 @@
   let rangeLight = d.getElementById( "light" );
 
   let setPicker = ( ( hue, sat, light ) => {
-    console.log(`Setting:  hsl(${hue} ${sat}% ${light}%)` );
+    // console.log(`Setting:  hsl(${hue} ${sat}% ${light}%)` );
     square.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
   } );
 
