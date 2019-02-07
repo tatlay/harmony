@@ -39,10 +39,26 @@
     logousColour4.style.backgroundColor = `hsl(${+hue-60} ${+sat-5}% ${light}%)`;
   });
 
+  let calcTriads = ( ( hue, sat, light ) => {
+    triadColour1.style.backgroundColor = `hsl(${+hue-120} ${+sat}% ${+light}%)`;
+    triadColour2.style.backgroundColor = `hsl(${+hue-120} ${+sat}% ${+light-20}%)`;
+    triadColour3.style.backgroundColor = `hsl(${+hue+120} ${+sat}% ${+light-20}%)`;
+    triadColour4.style.backgroundColor = `hsl(${+hue+120} ${+sat}% ${light}%)`;
+  });
+
+  let calcSplits = ( ( hue, sat, light ) => {
+    splitCompColour1.style.backgroundColor = `hsl(${+hue-150} ${+sat}% ${+light}%)`;
+    splitCompColour2.style.backgroundColor = `hsl(${+hue-150} ${+sat}% ${+light-20}%)`;
+    splitCompColour3.style.backgroundColor = `hsl(${+hue+150} ${+sat}% ${+light-20}%)`;
+    splitCompColour4.style.backgroundColor = `hsl(${+hue+150} ${+sat}% ${light}%)`;
+  })
+
   let createHarmonies = ( ( hue, sat, light ) => {
     calcComps( hue, sat, light );
     calcMonos( hue, sat, light );
     calcLogous( hue, sat, light );
+    calcTriads( hue, sat, light );
+    calcSplits( hue, sat, light );
   });
 
   let setPicker = ( ( hue, sat, light ) => {
