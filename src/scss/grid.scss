@@ -1,0 +1,31 @@
+.container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(4,auto);
+	grid-template-areas: 
+		"title"
+		"section"
+		"footer"
+		"nav";
+
+padding-left: 18px;
+padding-right: 18px;
+}
+
+header {
+	grid-area: title;
+}
+
+section {
+	grid-area: section;
+
+}
+
+footer{
+	grid-area: footer;
+	
+}
+
+nav{
+	grid-area: nav;
+}
