@@ -15,7 +15,7 @@ let uglify = require('gulp-uglify-es').default;
 // CSS functions
 
 gulp.task('sass', function () {
-    return gulp.src('./src/scss/*.scss')
+    return gulp.src('./src/scss/styles.scss')
         .pipe(sass())
         .pipe(rename('styles.css'))
         .pipe(gulp.dest('./dist/css'));
