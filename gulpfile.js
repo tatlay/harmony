@@ -1,3 +1,4 @@
+
 // General dependencies
 let gulp = require('gulp');
 let rename = require('gulp-rename');
@@ -55,15 +56,6 @@ gulp.task('watch', function () {
 	gulp.watch('./src/js/*.js', gulp.series('javaScript'));
 
 });
-
-
-
-
-
-
-
-
-
 
 
 
