@@ -14,20 +14,17 @@ let uglify = require('gulp-uglify-es').default;
 // CSS functions
 
 gulp.task('sass', function () {
-    var stream = gulp.src('./scss/styles.scss')
+    return gulp.src('./src/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./dist/'))
-        .pipe(rename('styles.css'));
-    return stream;
+        .pipe(rename('styles.css'))
+        .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task()
-
 gulp.task('minify-css', () => {
-	return gulp.src('css/styles.css')
+	return gulp.src('./dist/css/styles.css')
 		.pipe(cleanCSS({compatibility: 'ie8'}))
 		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('./dist/'))
+		.pipe(gulp.dest('./dist/css/'));
 })
 
 // JS functions
@@ -35,29 +32,31 @@ gulp.task('minify-css', () => {
 gulp.task('styles', gulp.series('sass', 'minify-css'));
 
 gulp.task('concatScripts', function () {
-	let stream = gulp.src(['./js/jquery-3.2.1.slim.js', './js/popper.js', './js/bootstrap.js', './js/*.js'])
+	return gulp.src('./src/js/*.js')
 		.pipe(concat('all.js'))	
-		.pipe(gulp.dest('./dist/'));
-	return stream;
+		.pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('uglyScripts', function () {
-	return gulp.src('./js/all.js')
+	return gulp.src('./dist/js/all.js')
 		.pipe(uglify())
 		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('./dist/'));
+		.pipe(gulp.dest('./dist/js/'));
 })
 
-gulp.task('catMin', gulp.series('concatScripts', 'uglyScripts'));
+gulp.task('javaScript', gulp.series('concatScripts', 'uglyScripts'));
+
+
+// Watch
 
 
 gulp.task('watch', function () {
-	gulp.watch(['css/*.scss', 'css/*.css'])
-	gulp.series('catMin');
-	gulp.watch('./styles/*.js')
-	gulp.series('catMin');
+	gulp.watch('./src/scss/*.scss', gulp.series('styles'));
+	gulp.watch('./src/js/*.js', gulp.series('javaScript'));
 
 });
+
+
 
 
 
