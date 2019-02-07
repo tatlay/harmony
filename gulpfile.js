@@ -12,6 +12,7 @@ let concat = require('gulp-concat');
 let uglify = require('gulp-uglify-es').default;
 
 
+
 // CSS functions
 
 gulp.task('sass', function () {
@@ -28,9 +29,11 @@ gulp.task('minify-css', () => {
 		.pipe(gulp.dest('./dist/css/'));
 })
 
-// JS functions
-
 gulp.task('styles', gulp.series('sass', 'minify-css'));
+
+
+
+// JS functions
 
 gulp.task('concatScripts', function () {
 	return gulp.src('./src/js/*.js')
@@ -48,8 +51,8 @@ gulp.task('uglyScripts', function () {
 gulp.task('javaScript', gulp.series('concatScripts', 'uglyScripts'));
 
 
-// Watch
 
+// Watch
 
 gulp.task('watch', function () {
 	gulp.watch('./src/scss/*.scss', gulp.series('styles'));
