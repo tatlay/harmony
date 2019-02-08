@@ -2,6 +2,9 @@
 .container {
   padding: 2vw; }
 
+.hidden {
+  display: none; }
+
 .picker {
   border-radius: 15px;
   height: 150px;
