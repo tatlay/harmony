@@ -125,19 +125,23 @@ a {
   padding: 2vw; }
   .dummyHeader .dummyLogo {
     background-color: white;
-    color: white;
     float: left;
-    margin: 17px;
+    padding: 17px;
     width: 20%; }
   .dummyHeader .dummyNav {
-    color: white;
     background-color: white;
     float: right;
-    margin: 17px; }
+    padding: 17px;
+    width: 20%; }
 
 .dummyMain {
   background-color: white;
   display: block; }
+  .dummyMain .dummyContent {
+    background-color: black;
+    height: 8vw;
+    width: 70%;
+    margin: 5vw 0 5vw 2vw; }
 
 .dummyFooter {
   background-color: black;
@@ -145,11 +149,15 @@ a {
   display: block;
   width: 100%;
   bottom: 0;
-  left: 0; }
-  .dummyFooter h5 {
-    color: white;
-    padding: 20 0;
-    text-align: center; }
+  left: 0;
+  height: 5vw; }
+  .dummyFooter .footerContent {
+    background-color: white;
+    padding: 20;
+    margin: 0 auto;
+    margin-top: 17px;
+    height: 10px;
+    width: 20vw; }
 
 .sliders {
   width: 45%;

@@ -16,17 +16,18 @@
 
 	.dummyLogo {
 		background-color: white;
-		color: white;
 		float: left;
-		margin: 17px;
+		padding: 17px;
 		width: 20%;
 	}
 
 	.dummyNav {
-		color: white;
+		
 		background-color: white;
 		float: right;
-		margin: 17px;
+		padding: 17px;
+
+		width: 20%;
 
 	}
 }
@@ -34,6 +35,14 @@
 .dummyMain {
 	background-color: white;
 	display: block;
+
+	.dummyContent {
+		background-color: black;
+		height: 8vw;
+		width: 70%;
+
+		margin: 5vw 0 5vw 2vw;
+	}
 
 }
 
@@ -44,11 +53,18 @@
 	width: 100%;
 	bottom: 0;
 	left: 0;
+	height: 5vw;
 
-	h5 {
-		color: white;
-		padding: 20 0;
-		text-align: center;
+	.footerContent {
+		background-color: white;
+		padding: 20;
+		// text-align: center;
+		margin: 0 auto;
+
+		margin-top: 17px;
+		height: 10px;
+
+		width: 20vw;
 	}
 
 
