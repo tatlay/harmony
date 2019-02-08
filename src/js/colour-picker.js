@@ -5,6 +5,7 @@
   let splitArea = d.getElementById( "splitCompColourArea" );
   let logousArea = d.getElementById( "logousColourArea" );
   let triadArea = d.getElementById( "triadColourArea" );
+  let dummySection = d.getElementById( "dummySection" );
 
   // Modal box items
   let modalWindow = d.getElementById( "harmonyModal" );
@@ -15,6 +16,7 @@
   let modColBox4 = d.getElementById( "modColour4" );
   let modColBox5 = d.getElementById( "modColour5" );
 
+  // Colour slider items
   let rangeHue = d.getElementById( "hue" );
   let rangeSat = d.getElementById( "sat" );
   let rangeLight = d.getElementById( "light" );
@@ -109,7 +111,7 @@
 
   square.addEventListener( "click", () => {
     console.log("Clicky!!");
-    modalShown ? modalWindow.style.display = "none" : modalWindow.style.display = "block"
+    modalShown ? modalWindow.style.display = "none" : modalWindow.style.display = "block";
     modalShown = true;
   } );
 
@@ -118,5 +120,9 @@
     modalWindow.style.display = "none";
     modalShown = false;
   } );
+
+  dummySection.addEventListener( "click", event => {
+    console.log( event.target );
+  })
 
 })(document, window);
