@@ -6,6 +6,15 @@
   let logousArea = d.getElementById( "logousColourArea" );
   let triadArea = d.getElementById( "triadColourArea" );
 
+  // Modal box items
+  let modalWindow = d.getElementById( "harmonyModal" );
+  let modalShown = false;
+  let modColBox1 = d.getElementById( "modColour1" );
+  let modColBox2 = d.getElementById( "modColour2" );
+  let modColBox3 = d.getElementById( "modColour3" );
+  let modColBox4 = d.getElementById( "modColour4" );
+  let modColBox5 = d.getElementById( "modColour5" );
+
   let rangeHue = d.getElementById( "hue" );
   let rangeSat = d.getElementById( "sat" );
   let rangeLight = d.getElementById( "light" );
@@ -23,6 +32,12 @@
     compColour2.style.backgroundColor = `hsl(${hue} ${sat-20}% ${light}%)`;
     compColour3.style.backgroundColor = `hsl(${hue+180} ${sat}% ${light-30}%)`;
     compColour4.style.backgroundColor = `hsl(${hue+180} ${sat}% ${light}%)`;
+
+    modColBox1.style.backgroundColor = `hsl(${hue} ${sat}% ${light-30}%)`;
+    modColBox2.style.backgroundColor = `hsl(${hue} ${sat-20}% ${light}%)`;
+    modColBox3.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
+    modColBox4.style.backgroundColor = `hsl(${hue+180} ${sat}% ${light-30}%)`;
+    modColBox5.style.backgroundColor = `hsl(${hue+180} ${sat}% ${light}%)`;
   });
 
   let calcMonos = ( ( hue, sat, light ) => {
@@ -91,5 +106,17 @@
     light = +rangeLight.value;
     setPicker( hue, sat, light );
   } )
+
+  square.addEventListener( "click", () => {
+    console.log("Clicky!!");
+    modalShown ? modalWindow.style.display = "none" : modalWindow.style.display = "block"
+    modalShown = true;
+  } );
+
+  modalWindow.addEventListener( "click", () => {
+    console.log("Another clicky");
+    modalWindow.style.display = "none";
+    modalShown = false;
+  } );
 
 })(document, window);
