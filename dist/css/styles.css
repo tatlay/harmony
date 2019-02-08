@@ -1,13 +1,12 @@
-
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
-
+.container {
+  padding: 2vw; }
 
 .picker {
   border-radius: 15px;
   height: 150px;
   margin: 1em auto;
   width: 150px; }
-
 
 header {
   background-color: #33333B;
@@ -54,16 +53,16 @@ a {
   padding-left: 18px;
   padding-right: 18px; }
 
-header {
+.header {
   grid-area: title; }
 
-section {
+.main {
   grid-area: section; }
 
-footer {
+.footer {
   grid-area: footer; }
 
-nav {
+.nav {
   grid-area: nav; }
 
 .colourBox {
@@ -77,3 +76,6 @@ nav {
 .colourArea {
   width: 800px; }
 
+.dummySection {
+  border: 2px solid black;
+  height: 40em; }
