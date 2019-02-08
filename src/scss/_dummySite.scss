@@ -13,6 +13,7 @@
 	display: block;
 	overflow: auto;
 	padding: 2vw;
+	border-radius: 3px 3px 0 0;
 
 	.dummyLogo {
 		background-color: white;
@@ -54,6 +55,7 @@
 	bottom: 0;
 	left: 0;
 	height: 5vw;
+	border-radius: 0 0 3px 3px;
 
 	.footerContent {
 		background-color: white;
