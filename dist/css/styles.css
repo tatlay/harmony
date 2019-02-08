@@ -59,7 +59,8 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
-  display: "none"; }
+  display: "none";
+  z-index: 5; }
 
 .hmBox {
   position: absolute;
