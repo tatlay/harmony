@@ -46,6 +46,32 @@ a {
   color: #7979B2;
   text-decoration: none; }
 
+.harmonyModal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: "none"; }
+
+.hmBox {
+  position: absolute;
+  width: 50%;
+  height: 40%;
+  background-color: white;
+  border: 5px black solid;
+  border-radius: 20px;
+  top: 30%;
+  left: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.modCol {
+  width: 15%;
+  height: 80%;
+  border-radius: 15px;
+  background-color: black; }
+
 .container {
   display: grid;
   grid-template-columns: 1fr;
