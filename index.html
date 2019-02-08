@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang=en>
   <head>
 		<title>Project Harmony</title>
 		<link rel="stylesheet" href="dist/css/styles.min.css">
   </head>
   <body class="container">
-
 		<section id="harmonyModal" class="harmonyModal">
 			<div class="hmBox">
 				<div id="modColour1" class="modCol modCol1"></div>
@@ -15,34 +14,50 @@
 				<div id="modColour5" class="modCol modCol5"></div>
 			</div>
 		</section>
-
     <header class="header">
 			<div class="logo"></div>
 	    <h1>Colour Harmonies</h1>
     </header>
-
     <!-- <main class="col-sm-offset-3 col-sm-6"> Let's not use the BootStrap classes just yet! -->
-
-
 	<main class="main">
-		<div id="picker" class="picker"></div>
-		<section class="selectors">
-			<div class="form-group">
-				<label for="hue">Hue</label>
-				<input id="hue" type="range" value="0" min="0" max="360" />
+
+		<div class="about">
+			<h2>Welcome</h2>
+			<p>...to the Colour Harmony tool. Please use the sliders below to create the colour you will use to produce your swatch. We will use algorithms to suggest colours that will complement your choice. Once you're happy with your swatch, take a look at our layout chooser and see what your website could look like.</p>
+		</div>
+		<section class="colourSelection">
+			<div class="pickerArea">
+				<div id="picker" class="picker"></div>
 			</div>
-			<div class="form-group">
-				<label for="sat">Saturation</label>
-				<input id="sat" type="range" value="50" min="0" max="100" />
-			</div>
-			<div class="form-group">
-				<label for="light">Lightness</label>
-				<input id="light" type="range" value="70" min="70" max="70" />
+
+			<div class="selectors">
+				<div class="form-group">
+					<label for="hue">Hue</label>
+					<input id="hue" type="range" value="0" min="0" max="360" />
+				</div>
+				<div class="form-group">
+					<label for="sat">Saturation</label>
+					<input id="sat" type="range" value="50" min="0" max="100" />
+				</div>
+				<div class="form-group">
+					<label for="light">Lightness</label>
+					<input id="light" type="range" value="70" min="70" max="70" />
+				</div>
 			</div>
 		</section>
-		<section class="outputs">
-			<div>
-				<h2>Monochromatic</h2>
+		<section >
+			<div class="outputs">
+
+				<h2>Complementary</h2>
+				<div id="compColourArea" class="colourArea">
+					<div id="compColour1" class="compColour1 colourBox"></div>
+					<div id="compColour2" class="compColour2 colourBox"></div>
+					<div id="compColour3" class="compColour3 colourBox"></div>
+					<div id="compColour4" class="compColour4 colourBox"></div>
+				</div>
+
+				<div class="hidden">
+					<h2>Monochromatic</h2>
 					<div id="monoColourArea" class="colourArea">
 						<div id="monoColour1" class="monoColour1 colourBox"></div>
 						<div id="monoColour2" class="monoColour2 colourBox"></div>
@@ -50,23 +65,17 @@
 						<div id="monoColour4" class="monoColour4 colourBox"></div>
 					</div>
 
-				<h2>Complementary</h2>
-					<div id="compColourArea" class="colourArea">
-						<div id="compColour1" class="compColour1 colourBox"></div>
-						<div id="compColour2" class="compColour2 colourBox"></div>
-						<div id="compColour3" class="compColour3 colourBox"></div>
-						<div id="compColour4" class="compColour4 colourBox"></div>
-					</div>
 
-				<h2>Split Complementary</h2>
+
+					<h2>Split Complementary</h2>
 					<div id="splitCompColourArea" class="colourArea">
-							<div id="splitCompColour1" class="splitCompColour1 colourBox"></div>
-							<div id="splitCompColour2" class="splitCompColour2 colourBox"></div>
-							<div id="splitCompColour3" class="splitCompColour3 colourBox"></div>
-							<div id="splitCompColour4" class="splitCompColour4 colourBox"></div>
+						<div id="splitCompColour1" class="splitCompColour1 colourBox"></div>
+						<div id="splitCompColour2" class="splitCompColour2 colourBox"></div>
+						<div id="splitCompColour3" class="splitCompColour3 colourBox"></div>
+						<div id="splitCompColour4" class="splitCompColour4 colourBox"></div>
 					</div>
 
-				<h2>Analogous</h2>
+					<h2>Analogous</h2>
 					<div id="logousColourArea" class="colourArea">
 						<div id="logousColour1" class="logousColour1 colourBox"></div>
 						<div id="logousColour2" class="logousColour2 colourBox"></div>
@@ -75,35 +84,45 @@
 					</div>
 
 
-				<h2>Triadic</h2>
+					<h2>Triadic</h2>
 					<div id="triadColourArea" class="colourArea">
 						<div id="triadColour1" class="triadColour1 colourBox"></div>
 						<div id="triadColour2" class="triadColour2 colourBox"></div>
 						<div id="triadColour3" class="triadColour3 colourBox"></div>
 						<div id="triadColour4" class="triadColour4 colourBox"></div>
-					</div>
+					</div>	
+				</div>
+				
 			</div>
 		</section>
 
-		<section id="dummySection" class="dummySection">
-			<div class="dummyHeader">
-				<div class="dummyLogo"></div>
-				<dir class="dummyNav"></dir>
+		<section> 
 
+			<h2>Layout Chooser</h2>
 
-			</div>
+			<p>If you're happy with the colours you've chosen, click on the elements below to assign colours from your swatch.</p>
 
-			<div class="dummyMain">
-				<h4>Main content area</h4>
-			</div>
+			<div id="dummySection" class="dummySection">
+				<div class="dummyHeader">
+					<div class="dummyLogo"></div>
+					<div class="dummyNav"></div>
 
-			<div class="dummyFooter">
-				<h5>Footer</h5>
+			  </div>
+
+				<div class="dummyMain">
+
+					<div class="dummyContent"></div>
+					<div class="dummyContent"></div>
+					
+				</div>
+
+				<div class="dummyFooter">
+					<div class="footerContent"></div>
+				</div>
 			</div>
 
 		</section>
 	</main>
-
 	<footer id="footer" class="footer">
 		<p class="copy">&copy; Harmony 2019</p>
 	</footer>
@@ -111,11 +130,9 @@
 	<nav class="lowerSection nav">
 			<a href="#">Colour Theory</a> |
 			<a href="#">Contact</a>
-	</nav>	
+	</nav>
+
 
 	<script src="dist/js/all.js"></script>
-
-
   </body>
 </html>
-

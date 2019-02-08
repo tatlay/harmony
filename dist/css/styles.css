@@ -3,10 +3,13 @@
 .container {
   padding: 2vw; }
 
+.hidden {
+  display: none; }
+
 .picker {
   border-radius: 15px;
   height: 150px;
-  margin-left: 3em;
+  margin: 0 auto;
   width: 150px;
   display: inline-block; }
 
@@ -56,7 +59,8 @@ a {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
-  display: "none"; }
+  display: "none";
+  z-index: 5; }
 
 .hmBox {
   position: absolute;
@@ -110,10 +114,70 @@ a {
 
 .dummySection {
   border: 2px solid black;
-  height: 60vw; }
+  border-radius: 5px;
+  height: 60vw;
+  position: relative;
+  margin: 2vw; }
+
+.dummyHeader {
+  background-color: black;
+  display: block;
+  overflow: auto;
+  padding: 2vw;
+  border-radius: 3px 3px 0 0; }
+  .dummyHeader .dummyLogo {
+    background-color: white;
+    float: left;
+    padding: 17px;
+    width: 20%; }
+  .dummyHeader .dummyNav {
+    background-color: white;
+    float: right;
+    padding: 17px;
+    width: 20%; }
+
+.dummyMain {
+  background-color: white;
+  display: block; }
+  .dummyMain .dummyContent {
+    background-color: black;
+    height: 8vw;
+    width: 70%;
+    margin: 5vw 0 5vw 2vw; }
+
+.dummyFooter {
+  background-color: black;
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 5vw;
+  border-radius: 0 0 3px 3px; }
+  .dummyFooter .footerContent {
+    background-color: white;
+    padding: 20;
+    margin: 0 auto;
+    margin-top: 17px;
+    height: 10px;
+    width: 20vw; }
+
+.colourSelection {
+  overflow: auto; }
 
 .sliders {
   width: 45%;
+  display: inline-block; }
+
+.pickerArea {
+  float: right;
+  width: 45%;
+  display: inline-block; }
+
+.selectors {
+  float: left;
+  width: 45%;
+  margin: 0 auto;
   display: inline-block; }
 
 [type='range'] {

@@ -5,6 +5,9 @@
   let splitArea = d.getElementById( "splitCompColourArea" );
   let logousArea = d.getElementById( "logousColourArea" );
   let triadArea = d.getElementById( "triadColourArea" );
+  let dummySection = d.getElementById( "dummySection" );
+  let colourArray = [];
+  let clicked;
 
   // Modal box items
   let modalWindow = d.getElementById( "harmonyModal" );
@@ -15,6 +18,7 @@
   let modColBox4 = d.getElementById( "modColour4" );
   let modColBox5 = d.getElementById( "modColour5" );
 
+  // Colour slider items
   let rangeHue = d.getElementById( "hue" );
   let rangeSat = d.getElementById( "sat" );
   let rangeLight = d.getElementById( "light" );
@@ -28,16 +32,22 @@
   //      Harmony calculations
   // ----------------------------------------
   let calcComps = ( ( hue, sat, light ) => {
-    compColour1.style.backgroundColor = `hsl(${hue} ${sat}% ${light-30}%)`;
-    compColour2.style.backgroundColor = `hsl(${hue} ${sat-20}% ${light}%)`;
-    compColour3.style.backgroundColor = `hsl(${hue+180} ${sat}% ${light-30}%)`;
-    compColour4.style.backgroundColor = `hsl(${hue+180} ${sat}% ${light}%)`;
+    colourArray[0] = `hsl(${hue} ${sat}% ${light-30}%)`;
+    colourArray[1] = `hsl(${hue} ${sat-20}% ${light}%)`;
+    colourArray[2] = `hsl(${hue} ${sat}% ${light}%)`;
+    colourArray[3] = `hsl(${hue+180} ${sat}% ${light-30}%)`;
+    colourArray[4] = `hsl(${hue+180} ${sat}% ${light}%)`;
 
-    modColBox1.style.backgroundColor = `hsl(${hue} ${sat}% ${light-30}%)`;
-    modColBox2.style.backgroundColor = `hsl(${hue} ${sat-20}% ${light}%)`;
-    modColBox3.style.backgroundColor = `hsl(${hue} ${sat}% ${light}%)`;
-    modColBox4.style.backgroundColor = `hsl(${hue+180} ${sat}% ${light-30}%)`;
-    modColBox5.style.backgroundColor = `hsl(${hue+180} ${sat}% ${light}%)`;
+    compColour1.style.backgroundColor = colourArray[0];
+    compColour2.style.backgroundColor = colourArray[1];
+    compColour3.style.backgroundColor = colourArray[3];
+    compColour4.style.backgroundColor = colourArray[4];
+
+    modColBox1.style.backgroundColor = colourArray[0];
+    modColBox2.style.backgroundColor = colourArray[1];
+    modColBox3.style.backgroundColor = colourArray[2];
+    modColBox4.style.backgroundColor = colourArray[3];
+    modColBox5.style.backgroundColor = colourArray[4];
   });
 
   let calcMonos = ( ( hue, sat, light ) => {
@@ -107,16 +117,16 @@
     setPicker( hue, sat, light );
   } )
 
-  square.addEventListener( "click", () => {
-    console.log("Clicky!!");
-    modalShown ? modalWindow.style.display = "none" : modalWindow.style.display = "block"
-    modalShown = true;
-  } );
-
-  modalWindow.addEventListener( "click", () => {
-    console.log("Another clicky");
+  modalWindow.addEventListener( "click", event => {
+    clicked.style.backgroundColor = event.target.style.backgroundColor;
     modalWindow.style.display = "none";
     modalShown = false;
   } );
+
+  dummySection.addEventListener( "click", event => {
+    clicked = event.target;
+    modalWindow.style.display = "block";
+    modalShown = true;
+  })
 
 })(document, window);

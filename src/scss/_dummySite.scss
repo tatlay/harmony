@@ -1,6 +1,73 @@
 .dummySection {
 	border: 2px solid black;
+	border-radius: 5px;
 
 	height: 60vw;
+	position: relative;
+
+	margin: 2vw ;
 }
 
+.dummyHeader {
+	background-color: black;
+	display: block;
+	overflow: auto;
+	padding: 2vw;
+	border-radius: 3px 3px 0 0;
+
+	.dummyLogo {
+		background-color: white;
+		float: left;
+		padding: 17px;
+		width: 20%;
+	}
+
+	.dummyNav {
+		
+		background-color: white;
+		float: right;
+		padding: 17px;
+
+		width: 20%;
+
+	}
+}
+
+.dummyMain {
+	background-color: white;
+	display: block;
+
+	.dummyContent {
+		background-color: black;
+		height: 8vw;
+		width: 70%;
+
+		margin: 5vw 0 5vw 2vw;
+	}
+
+}
+
+.dummyFooter {
+	background-color: black;
+	position: absolute;
+	display: block;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	height: 5vw;
+	border-radius: 0 0 3px 3px;
+
+	.footerContent {
+		background-color: white;
+		padding: 20;
+		// text-align: center;
+		margin: 0 auto;
+
+		margin-top: 17px;
+		height: 10px;
+
+		width: 20vw;
+	}
+
+
+}
