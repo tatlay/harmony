@@ -9,7 +9,7 @@
 .picker {
   border-radius: 15px;
   height: 150px;
-  margin-left: 3em;
+  margin: 0 auto;
   width: 150px;
   display: inline-block; }
 
@@ -123,7 +123,8 @@ a {
   background-color: black;
   display: block;
   overflow: auto;
-  padding: 2vw; }
+  padding: 2vw;
+  border-radius: 3px 3px 0 0; }
   .dummyHeader .dummyLogo {
     background-color: white;
     float: left;
@@ -151,7 +152,8 @@ a {
   width: 100%;
   bottom: 0;
   left: 0;
-  height: 5vw; }
+  height: 5vw;
+  border-radius: 0 0 3px 3px; }
   .dummyFooter .footerContent {
     background-color: white;
     padding: 20;
@@ -160,8 +162,22 @@ a {
     height: 10px;
     width: 20vw; }
 
+.colourSelection {
+  overflow: auto; }
+
 .sliders {
   width: 45%;
+  display: inline-block; }
+
+.pickerArea {
+  float: right;
+  width: 45%;
+  display: inline-block; }
+
+.selectors {
+  float: left;
+  width: 45%;
+  margin: 0 auto;
   display: inline-block; }
 
 [type='range'] {

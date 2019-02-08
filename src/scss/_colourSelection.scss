@@ -1,4 +1,22 @@
+
+.colourSelection {
+	overflow: auto;
+}
+
 .sliders {
   width: 45%;
   display: inline-block;
+}
+
+.pickerArea {
+	float: right;
+	width: 45%;
+	display: inline-block;
+}
+
+.selectors {
+	float: left;
+	width: 45%;
+	margin: 0 auto;
+	display: inline-block;
 }
