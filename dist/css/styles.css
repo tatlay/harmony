@@ -79,7 +79,43 @@ a {
 
 .dummySection {
   border: 2px solid black;
-  height: 60vw; }
+  border-radius: 5px;
+  height: 60vw;
+  position: relative;
+  margin: 2vw; }
+
+.dummyHeader {
+  background-color: black;
+  display: block;
+  overflow: auto;
+  padding: 2vw; }
+  .dummyHeader .dummyLogo {
+    background-color: white;
+    color: white;
+    float: left;
+    margin: 17px;
+    width: 20%; }
+  .dummyHeader .dummyNav {
+    color: white;
+    background-color: white;
+    float: right;
+    margin: 17px; }
+
+.dummyMain {
+  background-color: white;
+  display: block; }
+
+.dummyFooter {
+  background-color: black;
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  left: 0; }
+  .dummyFooter h5 {
+    color: white;
+    padding: 20 0;
+    text-align: center; }
 
 .sliders {
   width: 45%;

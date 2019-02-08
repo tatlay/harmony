@@ -1,6 +1,55 @@
 .dummySection {
 	border: 2px solid black;
+	border-radius: 5px;
 
 	height: 60vw;
+	position: relative;
+
+	margin: 2vw ;
 }
 
+.dummyHeader {
+	background-color: black;
+	display: block;
+	overflow: auto;
+	padding: 2vw;
+
+	.dummyLogo {
+		background-color: white;
+		color: white;
+		float: left;
+		margin: 17px;
+		width: 20%;
+	}
+
+	.dummyNav {
+		color: white;
+		background-color: white;
+		float: right;
+		margin: 17px;
+
+	}
+}
+
+.dummyMain {
+	background-color: white;
+	display: block;
+
+}
+
+.dummyFooter {
+	background-color: black;
+	position: absolute;
+	display: block;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+
+	h5 {
+		color: white;
+		padding: 20 0;
+		text-align: center;
+	}
+
+
+}
