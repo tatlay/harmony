@@ -12,20 +12,18 @@ padding-left: 18px;
 padding-right: 18px;
 }
 
-header {
+.header {
 	grid-area: title;
 }
 
-section {
+.main {
 	grid-area: section;
-
 }
 
-footer{
-	grid-area: footer;
-	
+.footer{
+	grid-area: footer;	
 }
 
-nav{
+.nav{
 	grid-area: nav;
 }
