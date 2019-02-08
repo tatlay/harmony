@@ -79,8 +79,7 @@ a {
 
 .dummySection {
   border: 2px solid black;
-2  height: 40em; }
-
+  height: 60vw; }
 
 .sliders {
   width: 45%;
@@ -178,4 +177,3 @@ a {
     cursor: not-allowed; }
   [type='range']:disabled::-ms-fill-upper {
     cursor: not-allowed; }
-
